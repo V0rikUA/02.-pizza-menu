@@ -49,9 +49,32 @@ function App() {
   return (
     <div className="App">
       <h1>Hello React!!!</h1>
+      <Header />
       <Pizza />
       <Pizza />
       <Pizza />
+      <Footer />
+    </div>
+  );
+}
+
+function Header() {
+  return (
+    <div>
+      <h1>Fast React Pizza Co.</h1>
+    </div>
+  );
+}
+
+function Menu() {}
+
+function Footer() {
+  return (
+    <div>
+      <footer>
+        {new Date().toLocaleTimeString()} We're currently open until 22:00. Come
+        visit us or order online.
+      </footer>
     </div>
   );
 }
