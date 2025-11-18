@@ -1,4 +1,4 @@
-import "./App.css";
+import "../src/index.css";
 
 const pizzaData = [
   {
@@ -47,31 +47,49 @@ const pizzaData = [
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello React!!!</h1>
+    <div className="container">
       <Header />
-      <Pizza />
-      <Pizza />
-      <Pizza />
+      <Menu />
       <Footer />
     </div>
   );
 }
 
 function Header() {
+  const style = {};
+
   return (
-    <div>
-      <h1>Fast React Pizza Co.</h1>
-    </div>
+    <header className="header">
+      <h1 style={style}>Fast React Pizza Co.</h1>
+    </header>
   );
 }
 
-function Menu() {}
+function Menu() {
+  return (
+    <main className="menu">
+      <h2>Our Menu</h2>
+      <Pizza />
+      <Pizza />
+      <Pizza />
+      <Pizza />
+      <Pizza />
+      <Pizza />
+    </main>
+  );
+}
 
 function Footer() {
+  const hour = new Date().getHours();
+  const openHour = 12;
+  const closeHour = 22;
+  const isOpen = hour >= openHour && hour <= closeHour;
+
+  // isOpen ? alert("We're currently open!") : alert("Sorry, we're closed now.");
+
   return (
     <div>
-      <footer>
+      <footer className="footer">
         {new Date().toLocaleTimeString()} We're currently open until 22:00. Come
         visit us or order online.
       </footer>
@@ -83,7 +101,7 @@ function Pizza() {
   return (
     <div>
       <img src="pizzas/spinaci.jpg" alt="Pizza Spinaci" />
-      <h2>Pizza Spinaci</h2>
+      <h3>Pizza Spinaci</h3>
       <p>Tomato, mozarella, spinach, and ricotta cheese</p>
       <p>Price: $12</p>
     </div>
