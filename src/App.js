@@ -69,13 +69,30 @@ function Menu() {
   return (
     <main className="menu">
       <h2>Our Menu</h2>
-      <Pizza />
-      <Pizza />
-      <Pizza />
-      <Pizza />
-      <Pizza />
-      <Pizza />
+      <Pizza
+        name={"Pizza Spinaci"}
+        ingredients={"Tomato, mozarella, spinach, and ricotta cheese"}
+        price={10}
+        photoName={"pizzas/spinaci.jpg"}
+      />
+      <Pizza
+        name={"Pizza Funghi"}
+        ingredients={"Tomato, mozarella, mushrooms, and onion"}
+        price={12}
+        photoName={"pizzas/funghi.jpg"}
+      />
     </main>
+  );
+}
+
+function Pizza({ name, ingredients, price, photoName }) {
+  return (
+    <div className="pizza">
+      <img src={photoName} alt={name} />
+      <h3>{name}</h3>
+      <p>{ingredients}</p>
+      <p>Price: ${price}</p>
+    </div>
   );
 }
 
@@ -93,17 +110,6 @@ function Footer() {
         {new Date().toLocaleTimeString()} We're currently open until 22:00. Come
         visit us or order online.
       </footer>
-    </div>
-  );
-}
-
-function Pizza() {
-  return (
-    <div>
-      <img src="pizzas/spinaci.jpg" alt="Pizza Spinaci" />
-      <h3>Pizza Spinaci</h3>
-      <p>Tomato, mozarella, spinach, and ricotta cheese</p>
-      <p>Price: $12</p>
     </div>
   );
 }
