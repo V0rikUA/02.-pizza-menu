@@ -1,47 +1,47 @@
 # Fast React Pizza
 
-Fast React Pizza - это простое приложение-меню пиццы, созданное с использованием React. Оно отображает список доступных пицц с их названиями, ингредиентами, ценами и изображениями. Также указывается, если пицца распродана.
+Fast React Pizza is a simple pizza menu application built with React. It displays a list of available pizzas with their names, ingredients, prices, and images. It also indicates if a pizza is sold out.
 
-## ✨ Возможности
+## ✨ Features
 
-*   Отображение списка пицц с изображениями, ингредиентами и ценами.
-*   Выделение распроданных пицц.
-*   Простой и понятный пользовательский интерфейс.
-*   Адаптивный дизайн для просмотра на разных устройствах.
+*   Displays a list of pizzas with images, ingredients, and prices.
+*   Highlights sold-out pizzas.
+*   Simple and intuitive user interface.
+*   Responsive design for viewing on different devices.
 
-## 🚀 Технологии
+## 🚀 Technologies
 
-*   **React:** Библиотека JavaScript для создания пользовательских интерфейсов.
-*   **CSS:** Стилизация компонентов для привлекательного внешнего вида.
+*   **React:** A JavaScript library for building user interfaces.
+*   **CSS:** Styling components for an attractive appearance.
 
-## ⚙️ Установка и запуск
+## ⚙️ Installation and Startup
 
-1.  **Клонируйте репозиторий:**
+1.  **Clone the repository:**
     ```bash
     git clone https://github.com/your-username/fast-react-pizza.git
     cd fast-react-pizza
     ```
 
-2.  **Установите зависимости:**
+2.  **Install dependencies:**
     ```bash
     npm install
     ```
 
-3.  **Запустите проект в режиме разработки:**
+3.  **Start the project in development mode:**
     ```bash
     npm start
     ```
-    Приложение откроется в вашем браузере по адресу [http://localhost:3000](http://localhost:3000).
+    The application will open in your browser at [http://localhost:3000](http://localhost:3000).
 
-## 📜 Доступные скрипты
+## 📜 Available Scripts
 
-В директории проекта вы можете запустить:
+In the project directory, you can run:
 
-*   `npm start`: Запускает приложение в режиме разработки.
-*   `npm test`: Запускает тесты в интерактивном режиме.
-*   `npm run build`: Собирает приложение для продакшена в папку `build`.
-*   `npm run eject`: Извлекает все конфигурационные файлы и зависимости в ваш проект. **Внимание: это необратимая операция!**
+*   `npm start`: Runs the app in development mode.
+*   `npm test`: Launches the test runner in interactive watch mode.
+*   `npm run build`: Builds the app for production to the `build` folder.
+*   `npm run eject`: Removes this tool and copies build dependencies, configuration files, and scripts into the app directory. **Note: this is a one-way operation!**
 
 ---
 
-Этот проект был создан в рамках изучения React.
+This project was created as part of learning React.
