@@ -66,31 +66,35 @@ function Header() {
 }
 
 function Menu() {
+  const pizzas = pizzaData;
+
   return (
     <main className="menu">
       <h2>Our Menu</h2>
-      {pizzaData.map(({ name, ingredients, price, photoName }) => {
-        return (
-          <Pizza
-            name={name}
-            ingredients={ingredients}
-            price={price}
-            photoName={photoName}
-          />
-        );
-      })}
+
+      {pizzas.length > 0 ? (
+        <ul className="pizzas">
+          {pizzaData.map((pizza) => (
+            <Pizza key={pizza.name} pizzaObj={pizza} />
+          ))}
+        </ul>
+      ) : (
+        <p>We're still working on our menu. Please check back later.</p>
+      )}
     </main>
   );
 }
 
-function Pizza({ name, ingredients, price, photoName }) {
+function Pizza({ pizzaObj }) {
   return (
-    <div className="pizza">
-      <img src={photoName} alt={name} />
-      <h3>{name}</h3>
-      <p>{ingredients}</p>
-      <p>Price: ${price}</p>
-    </div>
+    <li className="pizza">
+      <img src={pizzaObj.photoName} alt={pizzaObj.name} />
+      <div>
+        <h3>{pizzaObj.name}</h3>
+        <p>{pizzaObj.ingredients}</p>
+        <span>Price: ${pizzaObj.price}</span>
+      </div>
+    </li>
   );
 }
 
@@ -105,8 +109,18 @@ function Footer() {
   return (
     <div>
       <footer className="footer">
-        {new Date().toLocaleTimeString()} We're currently open until 22:00. Come
-        visit us or order online.
+        {/* {new Date().toLocaleTimeString()} We're currently open until 22:00. Come
+        visit us or order online. */}
+        {isOpen ? (
+          <div className="order">
+            <p>
+              We're open until {closeHour}:00. Come visit us or order online.
+            </p>
+            <button className="btn">Order</button>
+          </div>
+        ) : (
+          <p>We're closed now. Please come back later.</p>
+        )}
       </footer>
     </div>
   );
